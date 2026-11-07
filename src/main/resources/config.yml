@@ -1,0 +1,18 @@
+messages:
+  prefix: "&8[&6ItemForge&8] "
+  cooldown: "&cTunggu &e{time}s &clagi."
+  no-permission: "&cKamu tidak punya izin memakai item ini."
+# Stat custom (non-vanilla) yang dibaca saat menyerang:
+#   crit-chance (%), crit-damage (% bonus), lifesteal (%)
+show-stats-in-lore: true
+stat-format: "&7{name}: &a+{value}"
+stat-names:
+  damage: "Damage"
+  attack-speed: "Attack Speed"
+  armor: "Armor"
+  health: "Health"
+  speed: "Speed"
+  knockback-resist: "Knockback Resist"
+  crit-chance: "Crit Chance %"
+  crit-damage: "Crit Damage %"
+  lifesteal: "Lifesteal %"

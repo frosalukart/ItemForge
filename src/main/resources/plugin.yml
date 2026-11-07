@@ -1,0 +1,15 @@
+name: ItemForge
+version: 1.0.0
+main: id.itemforge.ItemForge
+api-version: "1.21"
+authors: [you]
+description: Custom RPG item + ability plugin (ModelEngine & resource pack ready)
+softdepend: [ModelEngine, PlaceholderAPI, Geyser-Spigot, floodgate]
+commands:
+  itemforge:
+    description: ItemForge admin command
+    aliases: [ifg, iforge]
+    permission: itemforge.admin
+permissions:
+  itemforge.admin:
+    default: op

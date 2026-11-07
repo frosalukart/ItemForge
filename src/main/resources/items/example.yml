@@ -1,0 +1,53 @@
+# Satu file bisa berisi banyak item. Key teratas = ID item.
+fire_sword:
+  material: DIAMOND_SWORD
+  name: "&c&lPedang Api"
+  lore:
+    - ""
+    - "&7Klik kanan: &6Ledakan Api"
+  # --- Resource pack (Java) ---
+  custom-model-data: 1001          # cocokkan dengan resource pack (range dispatch / legacy)
+  item-model: "rpg:fire_sword"     # 1.21.2+: assets/rpg/items/fire_sword.json
+  unbreakable: true
+  glow: true
+  enchants:
+    sharpness: 3
+  slot: mainhand                   # mainhand/offhand/head/chest/legs/feet/armor/any
+  stats:
+    damage: 6
+    attack-speed: 0.4
+    health: 4
+    crit-chance: 15
+    crit-damage: 50
+    lifesteal: 5
+  abilities:
+    flame_burst:
+      trigger: RIGHT_CLICK         # RIGHT_CLICK LEFT_CLICK SHIFT_RIGHT_CLICK HIT_ENTITY KILL_ENTITY WHEN_HIT CONSUME
+      cooldown: 8
+      permission: ""
+      consume: false               # true = habiskan 1 item tiap dipakai
+      actions:
+        - "SOUND:entity.blaze.shoot:1:1"
+        - "PARTICLE:FLAME:40:0.6"
+        - "DAMAGE_NEARBY:5:6"
+        - "IGNITE_NEARBY:5:80"
+        - "MESSAGE:&6Api meledak!"
+        - "MODEL:fire_aura:40"     # butuh ModelEngine, model id 'fire_aura', 40 tick
+    vampire_hit:
+      trigger: HIT_ENTITY
+      cooldown: 3
+      actions:
+        - "POTION:regeneration:3:1"
+
+healing_apple:
+  material: GOLDEN_APPLE
+  name: "&a&lApel Penyembuh"
+  custom-model-data: 2001
+  item-model: "rpg:healing_apple"
+  abilities:
+    eat:
+      trigger: CONSUME
+      actions:
+        - "HEAL:10"
+        - "POTION:speed:10:1"
+        - "COMMAND:say %player% makan apel ajaib"

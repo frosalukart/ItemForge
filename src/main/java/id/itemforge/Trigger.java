@@ -1,0 +1,3 @@
+package id.itemforge;
+
+public enum Trigger { RIGHT_CLICK, LEFT_CLICK, SHIFT_RIGHT_CLICK, HIT_ENTITY, KILL_ENTITY, WHEN_HIT, CONSUME }
